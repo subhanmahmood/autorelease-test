@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/subhanmahmood/autorelease-test/compare/v1.2.1...v1.2.2) (2022-03-28)
+
+
+### Bug Fixes
+
+* sdfdsfsagas ([6602a93](https://github.com/subhanmahmood/autorelease-test/commit/6602a934f2577d245dfa0bc5964c16a73255714e))
+
 ### [1.2.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.2.0...v1.2.1) (2022-03-28)
 
 
