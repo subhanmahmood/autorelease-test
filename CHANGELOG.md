@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.2.3...v1.3.0) (2022-03-28)
+
+
+### Features
+
+* added another console log ([866abe2](https://github.com/subhanmahmood/autorelease-test/commit/866abe2131bf70dcc6c53cc217088e0800b4b20a))
+* changed console log to use argv ([d976699](https://github.com/subhanmahmood/autorelease-test/commit/d9766997f19f7dd6d835879439060f54798f74ef))
+
+
+### Bug Fixes
+
+* changed action execution to manual ([d101601](https://github.com/subhanmahmood/autorelease-test/commit/d10160198cf9b5a119befff013ea89de9cd571df))
+
 ### [1.2.3](https://github.com/subhanmahmood/autorelease-test/compare/v1.2.2...v1.2.3) (2022-03-28)
 
 
