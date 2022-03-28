@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.3.0...v1.3.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* updated logs ([3d138ea](https://github.com/subhanmahmood/autorelease-test/commit/3d138ea4cec33b7b0cb7f6f071c90ebe4dae4427))
+
 ## [1.3.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.2.3...v1.3.0) (2022-03-28)
 
 
@@ -62,6 +69,3 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * new workflow to log changelog ([a55edc0](https://github.com/subhanmahmood/autorelease-test/commit/a55edc05e24d664c322e70c4b3e6b790fa21fd14))
-
-
-
