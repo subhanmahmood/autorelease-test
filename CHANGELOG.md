@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.0.1...v1.1.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* updated workflow ([001df23](https://github.com/subhanmahmood/autorelease-test/commit/001df23c28d4cb99ad8abaf6fe2274dce0b27eee))
+* workflow ([5254d71](https://github.com/subhanmahmood/autorelease-test/commit/5254d71889950af1ad19827069658db8cad46404))
+
+
+### Features
+
+* new release workflow ([#3](https://github.com/subhanmahmood/autorelease-test/issues/3)) ([f25d029](https://github.com/subhanmahmood/autorelease-test/commit/f25d0297ef434a7d2ce1ce30ba5c68b25428ca14))
+* test ([b222389](https://github.com/subhanmahmood/autorelease-test/commit/b22238969ed1261a50773a7543e853f00d2f27e0))
+* updated workflow ([b802de9](https://github.com/subhanmahmood/autorelease-test/commit/b802de9bc15b28da4aa2a74f2f4090cef8b8bba5))
+
+
+
 ## [1.0.1](https://github.com/subhanmahmood/autorelease-test/compare/v0.1.0...v1.0.1) (2022-03-28)
 
 
