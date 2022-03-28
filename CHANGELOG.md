@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.2.0...v1.2.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* worflow ([cead387](https://github.com/subhanmahmood/autorelease-test/commit/cead3874d9f090a437ffdf677eb3f8fb3a3bd09a))
+
 ## [1.2.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.1.0...v1.2.0) (2022-03-28)
 
 
