@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:subhanmahmood/autorelease-test.git",
   "author": "Subhan Mahmood <subhan70m@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "standard-version": "^9.3.2"
+  },
+  "scripts": {
+    "release:dry": "standard-version --dry-run",
+    "release": "standard-version --no-verify"
+  }
 }

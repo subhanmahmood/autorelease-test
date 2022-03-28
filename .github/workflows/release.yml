@@ -1,8 +1,8 @@
 name: Releases
 on:
   push:
-    branches:
-      - "main"
+    tags:
+      - "*"
 
 jobs:
   changelog:
@@ -10,6 +10,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: conventional Changelog Action
         id: changelog
@@ -17,13 +21,9 @@ jobs:
         with:
           github-token: ${{ secrets.RELEASE_TOKEN }}
           version-file: './package.json,./package-lock.json'
+      
+      - run: |
+        echo "RELEASE_TAG=${{ steps.changelog.outputs.clean_changelog }} >> $GITHUB_ENV"
+        echo "RELEASE_BODY=${{ steps.changelog.outputs.tag }} >> $GITHUB_ENV"
 
-      - name: create release
-
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "release.tar.gz,foo/*.txt"
-          body: ${{ steps.changelog.outputs.clean_changelog }}
-          tag: ${{ steps.changelog.outputs.tag }}
-          name: ${{ steps.changelog.outputs.tag }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: node index.js
