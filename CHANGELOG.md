@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.2.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.1.0...v1.2.0) (2022-03-28)
+
+
+### Features
+
+* new workflow to log changelog ([a55edc0](https://github.com/subhanmahmood/autorelease-test/commit/a55edc05e24d664c322e70c4b3e6b790fa21fd14))
+
 # [1.1.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.0.1...v1.1.0) (2022-03-28)
 
 
@@ -31,6 +42,3 @@
 
 * added readme ([b704a78](https://github.com/subhanmahmood/autorelease-test/commit/b704a78b9427fbf1f7e434b208a3e290ab010620))
 * added release workflow ([b1631cd](https://github.com/subhanmahmood/autorelease-test/commit/b1631cd90dfcc88e67ca5e0a296e92f47f7b2e08))
-
-
-
