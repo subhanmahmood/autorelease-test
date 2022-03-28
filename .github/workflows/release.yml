@@ -22,8 +22,7 @@ jobs:
           github-token: ${{ secrets.RELEASE_TOKEN }}
           version-file: './package.json,./package-lock.json'
 
-      - run: |
-        echo "RELEASE_BODY=${{ steps.changelog.outputs.clean_changelog }}" >> $GITHUB_ENV
-        echo "RELEASE_TAG=${{ steps.changelog.outputs.tag }}" >> $GITHUB_ENV
+      - run: echo "RELEASE_BODY=${{ steps.changelog.outputs.clean_changelog }}" >> $GITHUB_ENV
+      - run: echo "RELEASE_TAG=${{ steps.changelog.outputs.tag }}" >> $GITHUB_ENV
 
       - run: node index.js
