@@ -1,2 +1,3 @@
-console.log(process.argv[0])
-console.log(process.argv[1])
+const args = process.argv.slice(2);
+console.log(args[0])
+console.log(args[1])
