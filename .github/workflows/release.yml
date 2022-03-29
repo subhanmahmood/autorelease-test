@@ -1,5 +1,8 @@
 name: Releases
-on: [workflow_dispatch]
+on: 
+  push:
+    tags:
+      - "*"
 
 jobs:
   changelog:
