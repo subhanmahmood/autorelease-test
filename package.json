@@ -6,6 +6,8 @@
   "author": "Subhan Mahmood <subhan70m@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "conventional-changelog-core": "^4.2.4",
+    "standard-changelog": "^2.0.27",
     "standard-version": "^9.3.2"
   },
   "scripts": {
