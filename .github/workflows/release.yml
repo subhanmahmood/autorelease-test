@@ -12,13 +12,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.7.1
-        with:
-          skip-version-file: true
-          skip-commit: true
-          github-token: ${{ secrets.RELEASE_TOKEN }}
-          version-file: './package.json,./package-lock.json'
+      # - name: conventional Changelog Action
+      #   id: changelog
+      #   uses: TriPSs/conventional-changelog-action@v3.7.1
+      #   with:
+      #     skip-version-file: true
+      #     skip-commit: true
+      #     github-token: ${{ secrets.RELEASE_TOKEN }}
+      #     version-file: './package.json,./package-lock.json'
+      - run: npx standard-version --skip.bump --skip.commit --skip.tag
 
-      - run: node index.js "${{ steps.changelog.outputs.clean_changelog }}" "${{ steps.changelog.outputs.tag }}"
+      # - run: node index.js "${{ steps.changelog.outputs.clean_changelog }}" "${{ steps.changelog.outputs.tag }}"
