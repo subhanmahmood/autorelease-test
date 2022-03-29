@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/subhanmahmood/autorelease-test/compare/v1.3.1...v1.3.2) (2022-03-29)
+
 ### [1.3.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.3.0...v1.3.1) (2022-03-28)
 
 
