@@ -23,6 +23,6 @@ jobs:
           skip-commit: "true"
           output-file: "false"
           github-token: ${{ secrets.RELEASE_TOKEN }}
-          version-file: './package.json,./package-lock.json'
+          # version-file: './package.json,./package-lock.json'
 
       # - run: node index.js "${{ steps.changelog.outputs.clean_changelog }}" "${{ steps.changelog.outputs.tag }}"
