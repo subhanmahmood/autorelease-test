@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.9.0...v1.9.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* added job dependency ([0522298](https://github.com/subhanmahmood/autorelease-test/commit/0522298506846bc52331b274b8509d9f9ef8804c))
+
 ## [1.9.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.8.0...v1.9.0) (2022-03-30)
 
 
