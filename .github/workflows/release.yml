@@ -102,11 +102,11 @@ jobs:
         uses: LoveToKnow/slackify-markdown-action@v1.0.0
         with:
           text: ${{ steps.release-details.outputs.RELEASE_BODY }}
-          
+
       - uses: homeday-de/slack-release-bot-action@main
         with:
           webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
           title: ${{ steps.release-details.outputs.RELEASE_TITLE }}
           body: ${{ steps.formatted-release-body.outputs.text }}
-          context: ${{ env.SERVICE_NAME }}
+          context: "test"
 
