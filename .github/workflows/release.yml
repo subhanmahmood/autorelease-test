@@ -75,6 +75,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
       - name: Configure service specific deployment settings
         run: |
           export CURRENT_TAG=${GITHUB_REF#refs/*/}
@@ -106,7 +111,7 @@ jobs:
       - uses: homeday-de/slack-release-bot-action@main
         with:
           webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          title: "OrderPay Web Ordering ${{ steps.release-details.outputs.RELEASE_TITLE }}"
+          title: "OrderPay Web Ordering ${{ steps.extract_branch.outputs.branch }} ${{ steps.release-details.outputs.RELEASE_TITLE }}"
           body: ${{ steps.formatted-release-body.outputs.text }}
           context: "OrderPay Web Ordering"
 
