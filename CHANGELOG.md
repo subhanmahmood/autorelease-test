@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.10.0...v1.10.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* removed duplicate ([fbaaaee](https://github.com/subhanmahmood/autorelease-test/commit/fbaaaee067270403cd86358a541f126a71a0da31))
+
 ## [1.10.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.9.1...v1.10.0) (2022-03-30)
 
 
