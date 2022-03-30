@@ -1,8 +1,8 @@
 name: Releases
-on: [workflow_dispatch]
-  # push:
-  #   tags:
-  #     - "*"
+on: 
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   changelog:
@@ -23,7 +23,6 @@ jobs:
       - name: Retrieve release details
         id: release-details
         run: |
-          echo $GITHUB_REF
           echo $CURRENT_TAG
           RELEASE_TITLE=$(gh release view $CURRENT_TAG --json tagName --jq .tagName)
 
