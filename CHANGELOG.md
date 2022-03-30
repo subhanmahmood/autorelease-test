@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.0...v1.13.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* added branch name to message title ([5b40b71](https://github.com/subhanmahmood/autorelease-test/commit/5b40b715b38a37a10978dc8353ff47de8d0dd03f))
+
 ## [1.13.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.12.0...v1.13.0) (2022-03-30)
 
 
