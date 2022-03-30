@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.12.0...v1.13.0) (2022-03-30)
+
+
+### Features
+
+* added js file ([#4](https://github.com/subhanmahmood/autorelease-test/issues/4)) ([6dec080](https://github.com/subhanmahmood/autorelease-test/commit/6dec080e30d146c4afa68dd9be583e526de516a8))
+
+
+### Bug Fixes
+
+* added workflow context ([608421c](https://github.com/subhanmahmood/autorelease-test/commit/608421c5c1e62abd214de363d0b0645874c85ec5))
+
 ## [1.12.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.11.1...v1.12.0) (2022-03-30)
 
 
