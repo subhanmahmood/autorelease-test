@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.8.0...v1.9.0) (2022-03-30)
+
+
+### Features
+
+* added utils ([ac8b99e](https://github.com/subhanmahmood/autorelease-test/commit/ac8b99ec2f96115f714c85713b66ad4728fd4d00))
+
 ## [1.8.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.7.8...v1.8.0) (2022-03-30)
 
 
