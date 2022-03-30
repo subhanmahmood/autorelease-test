@@ -106,7 +106,7 @@ jobs:
       - uses: homeday-de/slack-release-bot-action@main
         with:
           webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          title: ${{ steps.release-details.outputs.RELEASE_TITLE }}
+          title: "OrderPay Web Ordering ${{ steps.release-details.outputs.RELEASE_TITLE }}"
           body: ${{ steps.formatted-release-body.outputs.text }}
-          context: "test"
+          context: "OrderPay Web Ordering"
 
