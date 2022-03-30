@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.7](https://github.com/subhanmahmood/autorelease-test/compare/v1.7.6...v1.7.7) (2022-03-30)
+
+
+### Bug Fixes
+
+* ci ([1de6cfe](https://github.com/subhanmahmood/autorelease-test/commit/1de6cfeb97cec2bceeed2e68b9a9d1a959c6b4ea))
+* sdgdsf ([cc2d8ac](https://github.com/subhanmahmood/autorelease-test/commit/cc2d8accae733ccdd501485d1889c33669453bd5))
+
 ### [1.7.6](https://github.com/subhanmahmood/autorelease-test/compare/v1.7.5...v1.7.6) (2022-03-30)
 
 ### [1.7.5](https://github.com/subhanmahmood/autorelease-test/compare/v1.7.4...v1.7.5) (2022-03-30)
