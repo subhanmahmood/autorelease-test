@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.9.1...v1.10.0) (2022-03-30)
+
+
+### Features
+
+* added slack message ([8de3819](https://github.com/subhanmahmood/autorelease-test/commit/8de38196a4ae829ab9af80eb3a9e160471b67f9c))
+
 ### [1.9.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.9.0...v1.9.1) (2022-03-30)
 
 
