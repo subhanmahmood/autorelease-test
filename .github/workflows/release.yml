@@ -70,14 +70,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: |
+          raw=$(git branch -r --contains ${{ github.ref }})
+          branch=${raw##*/}
+          echo "BRANCH=$branch" >> $GITHUB_ENV
         id: extract_branch
 
       - name: Configure service specific deployment settings
@@ -111,7 +115,7 @@ jobs:
       - uses: homeday-de/slack-release-bot-action@main
         with:
           webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          title: "OrderPay Web Ordering ${{ steps.extract_branch.outputs.branch }} ${{ steps.release-details.outputs.RELEASE_TITLE }}"
+          title: "OrderPay Web Ordering ${{ env.BRANCH }} ${{ steps.release-details.outputs.RELEASE_TITLE }}"
           body: ${{ steps.formatted-release-body.outputs.text }}
-          context: "OrderPay Web Ordering"
+          context: "OrderPay Web Ordering @ ${{ env.BRANCH }}"
 
