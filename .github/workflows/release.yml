@@ -1,5 +1,5 @@
 name: Releases
-on:
+on: 
   push:
     tags:
       - "*"
@@ -13,36 +13,9 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node-version }}0
 
       - name: Configure service specific settings
-        - run: |
-          export CURRENT_TAG=${GITHUB_REF#"refs/tags/"}
-          echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
-
-      - name: Retrieve release details
-        id: release-details
-        run: |
-          RELEASE_TITLE=$(gh release view $CURRENT_TAG --json tagName --jq .tagName)
-          RELEASE_BODY=$(gh release view $CURRENT_TAG --json body --jq .body)
-          RELEASE_BODY="${RELEASE_BODY//'%'/'%25'}"
-          RELEASE_BODY="${RELEASE_BODY//$'\n'/'%0A'}"
-          RELEASE_BODY="${RELEASE_BODY//$'\r'/'%0D'}"
-          echo "::set-output name=RELEASE_TITLE::$RELEASE_TITLE"
-          echo "::set-output name=RELEASE_BODY::$RELEASE_BODY"
-        env:
-          CURRENT_TAG: ${{ env.CURRENT_TAG }}
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-
-  # hello_world_job:
-  #   runs-on: ubuntu-latest
-  #   name: A job to say hello
-  #   steps:
-  #     - name: Hello world action step
-  #       id: hello
-  #       uses: subhanmahmood/first-action@v1.1
-  #       with:
-  #         who-to-greet: 'Mona the Octocat'
-  #     # Use the output from the `hello` step
-  #     - name: Get the output time
-  #       run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - run: |
+        export CURRENT_TAG=${GITHUB_REF#"refs/tags/"}
+        echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
