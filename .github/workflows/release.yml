@@ -1,5 +1,5 @@
 name: Releases
-on: 
+on:
   push:
     tags:
       - "*"
@@ -15,18 +15,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}0
 
-      - name: conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.7.1
-        with:
-          git-pull-method: '-f'
-          preset: 'conventionalcommits'
-          skip-version-file: "true"
-          skip-commit: "true"
-          output-file: "false"
-          github-token: ${{ secrets.RELEASE_TOKEN }}
+      - name: Retrieve release details
+        id: release-details
+        run: |
+          RELEASE_TITLE=$(gh release view $CURRENT_TAG --json tagName --jq .tagName)
+          RELEASE_BODY=$(gh release view $CURRENT_TAG --json body --jq .body)
+          RELEASE_BODY="${RELEASE_BODY//'%'/'%25'}"
+          RELEASE_BODY="${RELEASE_BODY//$'\n'/'%0A'}"
+          RELEASE_BODY="${RELEASE_BODY//$'\r'/'%0D'}"
+          echo "::set-output name=RELEASE_TITLE::$RELEASE_TITLE"
+          echo "::set-output name=RELEASE_BODY::$RELEASE_BODY"
+        env:
+          CURRENT_TAG: ${{ env.CURRENT_TAG }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
 
-      
   # hello_world_job:
   #   runs-on: ubuntu-latest
   #   name: A job to say hello
