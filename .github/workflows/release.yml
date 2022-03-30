@@ -5,7 +5,66 @@ on:
       - "v*.*.*"
 
 jobs:
-  changelog:
+  create-release:
+    # The type of runner that the job will run on
+    runs-on: [ubuntu-latest]
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      # Use LTS node version
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+
+      - name: Get release details
+        id: release_details
+        run: |
+          # Parse changelog
+          CHANGELOG=$(./utils/parse_changelog.sh)
+          MARKDOWN_CHANGELOG=$(echo $CHANGELOG | ./utils/markdown_to_html.sh)
+          echo "::set-output name=changelog::$CHANGELOG"
+          echo "::set-output name=markdown::"$MARKDOWN_CHANGELOG""
+          echo "::set-output name=version::${GITHUB_REF#refs/*/}"
+
+      # Create changelog
+      - name: Changelog
+        id: changelog
+        run: |
+          # sanity check
+          echo "Got changelog: ${{steps.release_details.outputs.changelog}}"
+          echo "Got markdown of changelog: ${{steps.release_details.outputs.markdown}}"
+      # Create github release
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: |
+            ${{ steps.release_details.outputs.changelog }}
+          draft: false
+          prerelease: false
+
+      # - name: Slack Notify
+      #   uses: rtCamp/action-slack-notify@v2.2.0
+      #   env:
+      #     SLACK_ICON: https://production-orderpay.s3.amazonaws.com/brand/images/logo/image/7e9db92f-be27-4d2c-a124-77251c8d11d6.png
+      #     SLACK_CHANNEL: op_deployment_frontend
+      #     SLACK_USERNAME: Bishop
+      #     SLACK_TITLE: 'OrderPay Web Ordering release ${{ steps.release_details.outputs.version }} :bookmark:'
+      #     SLACK_MESSAGE: ${{steps.release_details.outputs.changelog}}
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_DEPLOYMENT }}
+      #     MSG_MINIMAL: ref, commit
+
+  send-message:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,3 +95,4 @@ jobs:
         env:
           CURRENT_TAG: ${{ env.CURRENT_TAG }}
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+
