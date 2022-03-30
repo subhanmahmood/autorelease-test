@@ -17,7 +17,7 @@ jobs:
 
       - name: Configure service specific deployment settings
         run: |
-          export CURRENT_TAG=${GITHUB_REF#"refs/*/"}
+          export CURRENT_TAG=${GITHUB_REF#refs/*/}
           echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
 
       - name: Retrieve release details
