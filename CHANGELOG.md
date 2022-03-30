@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.11.1...v1.12.0) (2022-03-30)
+
+
+### Features
+
+* added body to index ([dea2554](https://github.com/subhanmahmood/autorelease-test/commit/dea2554504cf835d83dd8948a56b3db805c7d768))
+* added body to test ([feb3950](https://github.com/subhanmahmood/autorelease-test/commit/feb3950451f58ed128c661b085af4ed81e9bd850))
+* added index.html ([be120d4](https://github.com/subhanmahmood/autorelease-test/commit/be120d485ca557dc4a0b8eab5578f82ed92b50b2))
+
 ### [1.11.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.11.0...v1.11.1) (2022-03-30)
 
 ## [1.11.0](https://github.com/subhanmahmood/autorelease-test/compare/v1.10.1...v1.11.0) (2022-03-30)
