@@ -1,8 +1,8 @@
 name: Releases
-on:
-  push:
-    tags:
-      - "*"
+on: [workflow_dispatch]
+  # push:
+  #   tags:
+  #     - "*"
 
 jobs:
   changelog:
@@ -23,6 +23,7 @@ jobs:
       - name: Retrieve release details
         id: release-details
         run: |
+          echo $CURRENT_TAG
           RELEASE_TITLE=$(gh release view $CURRENT_TAG --json tagName --jq .tagName)
 
           RELEASE_BODY=$(gh release view $CURRENT_TAG --json body --jq .body)
