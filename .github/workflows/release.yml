@@ -17,5 +17,22 @@ jobs:
 
       - name: Configure service specific settings
       - run: |
-        export CURRENT_TAG=${GITHUB_REF#"refs/tags/"}
-        echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+          export CURRENT_TAG=${GITHUB_REF#"refs/tags/"}
+          echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+          fi
+          
+      - name: Retrieve release details
+        id: release-details
+        run: |
+          RELEASE_TITLE=$(gh release view $CURRENT_TAG --json tagName --jq .tagName)
+
+          RELEASE_BODY=$(gh release view $CURRENT_TAG --json body --jq .body)
+          RELEASE_BODY="${RELEASE_BODY//'%'/'%25'}"
+          RELEASE_BODY="${RELEASE_BODY//$'\n'/'%0A'}"
+          RELEASE_BODY="${RELEASE_BODY//$'\r'/'%0D'}"
+
+          echo "::set-output name=RELEASE_TITLE::$RELEASE_TITLE"
+          echo "::set-output name=RELEASE_BODY::$RELEASE_BODY"
+        env:
+          CURRENT_TAG: ${{ env.CURRENT_TAG }}
+          GITHUB_TOKEN: ${{ secrets.BOT_PERSONAL_ACCESS_TOKEN }}
