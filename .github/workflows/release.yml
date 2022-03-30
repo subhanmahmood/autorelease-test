@@ -65,6 +65,7 @@ jobs:
       #     MSG_MINIMAL: ref, commit
 
   send-message:
+    needs: create-release
     runs-on: ubuntu-latest
 
     steps:
