@@ -19,6 +19,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
+          git-pull-method: '-f'
           preset: 'conventionalcommits'
           skip-version-file: "true"
           skip-commit: "true"
