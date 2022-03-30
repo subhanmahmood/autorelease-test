@@ -34,4 +34,4 @@ jobs:
           echo "::set-output name=RELEASE_BODY::$RELEASE_BODY"
         env:
           CURRENT_TAG: ${{ env.CURRENT_TAG }}
-          GITHUB_TOKEN: ${{ secrets.BOT_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
