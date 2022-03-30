@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.5](https://github.com/subhanmahmood/autorelease-test/compare/v1.7.4...v1.7.5) (2022-03-30)
+
+
+### Bug Fixes
+
+* correct token ([b158107](https://github.com/subhanmahmood/autorelease-test/commit/b158107b2def0261cd63a1942f168ebd326e54a0))
+
 ### [1.7.4](https://github.com/subhanmahmood/autorelease-test/compare/v1.7.3...v1.7.4) (2022-03-30)
 
 
