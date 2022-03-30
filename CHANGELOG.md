@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.2](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.1...v1.13.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* added sdfsf ([63424f1](https://github.com/subhanmahmood/autorelease-test/commit/63424f1300c57840b765567bc73ecb0573d42d3a))
+
 ### [1.13.1](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.0...v1.13.1) (2022-03-30)
 
 
