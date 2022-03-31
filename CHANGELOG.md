@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.8](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.7...v1.13.8) (2022-03-31)
+
+
+### Bug Fixes
+
+* get latest tag for releases ([#11](https://github.com/subhanmahmood/autorelease-test/issues/11)) ([20345c2](https://github.com/subhanmahmood/autorelease-test/commit/20345c246a7c863a503583fd8cb1910bf91bf8a6))
+
 ### [1.13.7](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.6...v1.13.7) (2022-03-31)
 
 
