@@ -35,17 +35,17 @@ jobs:
       - name: Set Slack Webhook URL (alpha)
         if: env.BRANCH == 'alpha'
         run: |
-          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL}}
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_ALPHA}}
       
       - name: Set Slack Webhook URL (staging)
         if: env.BRANCH == 'staging'
         run: |
-          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL}}
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_STAGING}}
       
       - name: Set Slack Webhook URL (production)
         if: env.BRANCH == 'production'
         run: |
-          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL}}
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_PRODUCTION}}
 
       - name: Configure service specific deployment settings
         run: |
