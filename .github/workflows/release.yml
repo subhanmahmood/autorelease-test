@@ -117,17 +117,17 @@ jobs:
       - name: Set Slack Webhook URL (alpha)
         if: env.BRANCH == 'alpha'
         run: |
-          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_ALPHA}}
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_ALPHA}}" >> $GITHUB_ENV
       
       - name: Set Slack Webhook URL (staging)
         if: env.BRANCH == 'staging'
         run: |
-          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_STAGING}}
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_STAGING}}" >> $GITHUB_ENV
       
       - name: Set Slack Webhook URL (production)
         if: env.BRANCH == 'production'
         run: |
-          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_PRODUCTION}}
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_PRODUCTION}}" >> $GITHUB_ENV
 
       - uses: homeday-de/slack-release-bot-action@main
         with:
