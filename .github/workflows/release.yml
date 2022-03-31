@@ -1,4 +1,4 @@
-name: Releases
+name: Releases (tags)
 on: 
   push:
     tags:
@@ -39,6 +39,7 @@ jobs:
           # sanity check
           echo "Got changelog: ${{steps.release_details.outputs.changelog}}"
           echo "Got markdown of changelog: ${{steps.release_details.outputs.markdown}}"
+
       # Create github release
       - name: Create Release
         id: create_release
@@ -72,6 +73,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -112,9 +114,24 @@ jobs:
         with:
           text: ${{ steps.release-details.outputs.RELEASE_BODY }}
 
+      - name: Set Slack Webhook URL (alpha)
+        if: env.BRANCH == 'alpha'
+        run: |
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_ALPHA}}" >> $GITHUB_ENV
+      
+      - name: Set Slack Webhook URL (staging)
+        if: env.BRANCH == 'staging'
+        run: |
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_STAGING}}" >> $GITHUB_ENV
+      
+      - name: Set Slack Webhook URL (production)
+        if: env.BRANCH == 'production'
+        run: |
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_PRODUCTION}}" >> $GITHUB_ENV
+
       - uses: homeday-de/slack-release-bot-action@main
         with:
-          webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook_url: ${{ env.SLACK_WEBHOOK_URL }}
           title: "OrderPay Web Ordering ${{ env.BRANCH }} ${{ steps.release-details.outputs.RELEASE_TITLE }}"
           body: ${{ steps.formatted-release-body.outputs.text }}
           context: "OrderPay Web Ordering @ ${{ env.BRANCH }}"

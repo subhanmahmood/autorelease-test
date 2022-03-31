@@ -2,13 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.13.4](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.3...v1.13.4) (2022-03-30)
+### [1.13.8](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.7...v1.13.8) (2022-03-31)
+
+
+### Bug Fixes
+
+* get latest tag for releases ([#11](https://github.com/subhanmahmood/autorelease-test/issues/11)) ([20345c2](https://github.com/subhanmahmood/autorelease-test/commit/20345c246a7c863a503583fd8cb1910bf91bf8a6))
+
+### [1.13.7](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.6...v1.13.7) (2022-03-31)
+
+
+### Bug Fixes
+
+* set slack webhook url env properly ([#10](https://github.com/subhanmahmood/autorelease-test/issues/10)) ([a2c53af](https://github.com/subhanmahmood/autorelease-test/commit/a2c53afde1910ee81b9fb0bb0f1e125434807468))
+
+### [1.13.6](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.5...v1.13.6) (2022-03-31)
+
+
+### Bug Fixes
+
+* updated slack webhook url to be dynamic ([#9](https://github.com/subhanmahmood/autorelease-test/issues/9)) ([3300eda](https://github.com/subhanmahmood/autorelease-test/commit/3300edad563d9175c8cd0a4eb322738158fcdea7))
+
+### [1.13.5](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.3...v1.13.5) (2022-03-31)
 
 
 ### Bug Fixes
 
 * added dfgidsngkj ([#5](https://github.com/subhanmahmood/autorelease-test/issues/5)) ([d7be247](https://github.com/subhanmahmood/autorelease-test/commit/d7be2471ee6f3bb93b7c90eb985cbbc1029d4221))
-* added dfgidsngkj ([#6](https://github.com/subhanmahmood/autorelease-test/issues/6)) ([d7ff658](https://github.com/subhanmahmood/autorelease-test/commit/d7ff6587251a24a5f4e0da630ef6c3f1deb8dbd3))
+
+### [1.13.4](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.3...v1.13.4) (2022-03-31)
+
+
+### Bug Fixes
+
+* added dfgidsngkj ([#5](https://github.com/subhanmahmood/autorelease-test/issues/5)) ([d7be247](https://github.com/subhanmahmood/autorelease-test/commit/d7be2471ee6f3bb93b7c90eb985cbbc1029d4221))
+
 
 ### [1.13.3](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.2...v1.13.3) (2022-03-30)
 
