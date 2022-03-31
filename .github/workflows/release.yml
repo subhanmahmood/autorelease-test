@@ -114,9 +114,24 @@ jobs:
         with:
           text: ${{ steps.release-details.outputs.RELEASE_BODY }}
 
+      - name: Set Slack Webhook URL (alpha)
+        if: env.BRANCH == 'alpha'
+        run: |
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_ALPHA}}
+      
+      - name: Set Slack Webhook URL (staging)
+        if: env.BRANCH == 'staging'
+        run: |
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_STAGING}}
+      
+      - name: Set Slack Webhook URL (production)
+        if: env.BRANCH == 'production'
+        run: |
+          echo "SLACK_WEBHOOK_URL=${{secrets.SLACK_WEBHOOK_URL_PRODUCTION}}
+
       - uses: homeday-de/slack-release-bot-action@main
         with:
-          webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook_url: ${{ env.SLACK_WEBHOOK_URL }}
           title: "OrderPay Web Ordering ${{ env.BRANCH }} ${{ steps.release-details.outputs.RELEASE_TITLE }}"
           body: ${{ steps.formatted-release-body.outputs.text }}
           context: "OrderPay Web Ordering @ ${{ env.BRANCH }}"
