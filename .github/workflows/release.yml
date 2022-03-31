@@ -1,4 +1,4 @@
-name: Releases
+name: Releases (tags)
 on: 
   push:
     tags:
@@ -39,6 +39,7 @@ jobs:
           # sanity check
           echo "Got changelog: ${{steps.release_details.outputs.changelog}}"
           echo "Got markdown of changelog: ${{steps.release_details.outputs.markdown}}"
+
       # Create github release
       - name: Create Release
         id: create_release
@@ -72,6 +73,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
