@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.7](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.6...v1.13.7) (2022-03-31)
+
+
+### Bug Fixes
+
+* set slack webhook url env properly ([#10](https://github.com/subhanmahmood/autorelease-test/issues/10)) ([a2c53af](https://github.com/subhanmahmood/autorelease-test/commit/a2c53afde1910ee81b9fb0bb0f1e125434807468))
+
 ### [1.13.6](https://github.com/subhanmahmood/autorelease-test/compare/v1.13.5...v1.13.6) (2022-03-31)
 
 
